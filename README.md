@@ -25,3 +25,15 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+Node and NPM latest
+angular-cli
+bootstrap
+
+node-sass npm install node-sass --save-dev
+$ ng set defaults.styleExt scss
+
+to test dist:
+npm install http-server -g
+http-server ./dist 
+ in browser http://127.0.0.1:8080
