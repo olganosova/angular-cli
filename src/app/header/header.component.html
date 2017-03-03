@@ -1,1 +1,21 @@
-<div> <img [src] ="imageFile"  alt=""><span class="top-header">Header</span></div>
+<nav class="top-header">
+  <img src ="../../assets/images/Scotiabank-Logo.jpg"  alt="">
+  <a [routerLink]="['/']" >
+    Home
+  </a>
+  |
+  <a [routerLink]="['/contact', 'getRepos', { foo: 'foo' }]" >
+    Contact
+  </a>
+  |
+
+  <a [routerLink]="['/help']">
+    Help
+  </a>
+</nav>
+
+
+
+
+
+

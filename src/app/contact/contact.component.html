@@ -1,0 +1,13 @@
+<h2>Contact Reactive Form</h2>
+{{org}}
+<ngbd-modal-basic></ngbd-modal-basic>
+
+<h3 >Repo list</h3>
+<button (click)="makePost()">Make Post</button>
+<ul>
+  <li *ngFor="let repo of repos">
+    <a [routerLink]="['/github', repo.owner.login, repo.name]">
+      {{ repo.name }}
+    </a>
+  </li>
+</ul>

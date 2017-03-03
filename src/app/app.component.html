@@ -1,6 +1,12 @@
-<header-component></header-component>
-<h1 class="title-bg-color">
+<div class="container">
+  <header-component></header-component>
+  <h1 class="title-bg-color">
 
-  {{title}}
-</h1>
-<ngb-alert [dismissible]="true">I'm a dismissible alert :) </ngb-alert>
+    {{title}}
+  </h1>
+  <ngb-alert [dismissible]="true">I'm a dismissible alert :)</ngb-alert>
+  <template ngbModalContainer></template>
+
+  <router-outlet></router-outlet>
+  <router-outlet name="popup"></router-outlet>
+</div>

@@ -28,9 +28,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Node and NPM latest
 angular-cli
-bootstrap
+bootstrap: npm install --save @ng-bootstrap/ng-bootstrap
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-node-sass npm install node-sass --save-dev
+node-sass
+ npm install node-sass --save-dev
 $ ng set defaults.styleExt scss
 
 to test dist:

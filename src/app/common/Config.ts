@@ -1,37 +1,43 @@
+import {Injectable} from '@angular/core';
 
 
-// export default class CONFIG {
-//
-//   static imageFile() {
-//     // return  require("../img/logos/alfaTechLogoGr.png");
-//     return {
-//       images: {
-//         logo: require("../img/logos/alfaTechLogoGr.png")
-//       }
-//     };
-//   }
-// }
-
-
-import { Injectable} from '@angular/core';
 
 
 @Injectable()
-export class Config  {
+export class Config {
+
+  SETTINGS: {} =
+  {
+    fakeMode: true,
+    livePrefix: 'https://api.github.com/orgs/angular/',
+    mockPrefix: '../../assets/mocks/'
+
+  };
+
 
   images: {} =
-    {logo: require("../../assets/images/alfaTechLogoGr.png")}
+  {
+    logo: require("../../assets/images/Scotiabank-Logo.jpg"),
+    logoAlfatech: require("../../assets/images/alfaTechLogoGr.png")
+  };
 
-  // images: any[] = [
-  //   {logo: require("../img/logos/alfaTechLogoGr.png")}
-  // ]
   constructor() {
+
   }
 
-
+  getUrlPrefix() {
+    return this.SETTINGS['fakeMode'] ? this.SETTINGS['mockPrefix'] : this.SETTINGS['livePrefix'] ;
+  };
 
   getImage(key: any) {
     return this.images[key];
   }
 
-};
+  // getUrl(key: string) {
+  //   let url = this.urls.filter(
+  //     url => url.name === key);
+  // }
+  //
+
+}
+;
