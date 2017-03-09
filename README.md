@@ -28,14 +28,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Node and NPM latest
 angular-cli
-bootstrap: npm install --save @ng-bootstrap/ng-bootstrap
+bootstrap: 
+npm install --save @ng-bootstrap/ng-bootstrap
+npm install bootstrap@latest --save-dev
+ ------- restart ng serve
+
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+in styles.css: @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 node-sass
  npm install node-sass --save-dev
-$ ng set defaults.styleExt scss
+ng set defaults.styleExt scss
 
 to test dist:
 npm install http-server -g
-http-server ./dist 
+http-server ./dist //inside dist folder
  in browser http://127.0.0.1:8080

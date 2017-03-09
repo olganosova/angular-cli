@@ -2,19 +2,25 @@
  * Created by Administrator on 3/1/2017.
  */
 import {Component, OnInit} from '@angular/core';
-import {Config} from '../common/Config';
+import {Location} from '@angular/common';
+
 
 @Component({
   selector: 'help-component',
-  templateUrl: './help.component.html'
+  templateUrl: './help.component.html',
 })
 export class HelpComponent  implements OnInit {
 
+  location: Location;
 
-  constructor(private _config: Config) {
+  constructor(location: Location) {
+    this.location = location;
   }
 
   ngOnInit() {
 
   }
+  goToWeatherSite(): void{
+    //window.location..='https://www.theweathernetwork.com/ca/weather/15a/ontario/markham';
+}
 }

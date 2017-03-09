@@ -4,14 +4,20 @@
     Home
   </a>
   |
-  <a [routerLink]="['/contact', 'getRepos', { foo: 'foo' }]" >
+  <a [routerLink]="['/contact', 'getRepos', { foo: 'foo' }]" routerLinkActive="active">
     Contact
   </a>
   |
 
-  <a [routerLink]="['/help']">
+  <a [routerLink]="['/help']" routerLinkActive="active">
     Help
   </a>
+  |
+
+  <a [routerLink]="['/login']" [hidden] = "username" routerLinkActive="active">
+    Login
+  </a>
+  <span [hidden] = "!username">{{username}}</span>
 </nav>
 
 

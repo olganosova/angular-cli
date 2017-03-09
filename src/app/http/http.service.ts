@@ -14,6 +14,7 @@ export class URL {
 const URLS: URL[] = [
   {name: 'getRepos', endPoints: {live: 'repos', mock: 'repos.json'}},
   {name: 'makePost', endPoints: {live: 'makepost', mock: 'makepost.json'}},
+  {name: 'login', endPoints: {live: 'login', mock: 'login.json'}},
 ];
 const PREFIXES: {} =
 {
@@ -31,6 +32,7 @@ export class HttpService {
     this.prefix = config.SETTINGS['fakeMode'] ? PREFIXES['mockPrefix'] : PREFIXES['livePrefix'];
     this.urls = URLS;
   }
+
 
   makeRequest(path: string, method: string, payload?: any) {
     let params = new URLSearchParams();
@@ -50,14 +52,14 @@ export class HttpService {
     return Observable.throw(error);
   }
 
-  private getEndPoint(path: string) {
+  private getEndPoint(path: string) : string {
 
     var mode = this.config.SETTINGS['fakeMode'] ? 'mock' : 'live';
     var endPointObj = this.urls.filter(url => url.name === path)[0];
     return this.prefix + endPointObj['endPoints'][mode];
   };
 
-  private setRequestOptions(method: string, url: string, body: any, search?: URLSearchParams) {
+  private setRequestOptions(method: string, url: string, body: any, search?: URLSearchParams) : Request{
 
     let headers = new Headers({'Content-Type': 'application/json'});
 

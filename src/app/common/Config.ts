@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
-
-
+import {Province} from './models';
 
 
 @Injectable()
@@ -8,11 +7,18 @@ export class Config {
 
   SETTINGS: {} =
   {
-    fakeMode: true,
+    fakeMode: false,
     livePrefix: 'https://api.github.com/orgs/angular/',
     mockPrefix: '../../assets/mocks/'
 
   };
+
+  public provinces: Province[] = [
+    { "code": "", "name": "" },
+    { "code": "ON", "name": "Ontario" },
+    { "code": "BC", "name": "British Columbia" },
+    { "code": "QB", "name": "Quebec" }
+  ];
 
 
   images: {} =

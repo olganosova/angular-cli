@@ -16,6 +16,7 @@ export class ContactComponent implements OnInit {
   data: any;
   repos: Observable<any>;
   errorMessage: string;
+  state: any;
 
 
   constructor(private route: ActivatedRoute, private httpService: HttpService) {
@@ -34,14 +35,12 @@ export class ContactComponent implements OnInit {
 
     this.route.data.subscribe(data => {
       this.data = data;
-      // if (this.org) {
-      //   this.github.getReposForOrg(this.org)
-      //     .subscribe(
-      //       repos => { this.repos = repos },
-      //       error =>  this.errorMessage = <any>error);
-      // }
 
     });
+    //
+    // console.log(this.route.snapshot.url)  // array of states
+    // console.log(this.route.snapshot.url[1].path)
+
 
     this.route.params.subscribe(params => {
       this.org = params['org'];
