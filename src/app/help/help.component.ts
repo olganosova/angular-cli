@@ -3,6 +3,8 @@
  */
 import {Component, OnInit} from '@angular/core';
 import {Location} from '@angular/common';
+import {Router, ActivatedRoute} from '@angular/router';
+import 'rxjs/add/operator/switchMap';
 
 
 @Component({
@@ -10,17 +12,24 @@ import {Location} from '@angular/common';
   templateUrl: './help.component.html',
 })
 export class HelpComponent  implements OnInit {
+  _location: Location;
+  currentUser: string;
 
-  location: Location;
-
-  constructor(location: Location) {
-    this.location = location;
+  constructor(loc: Location,  private router: Router, private route: ActivatedRoute) {
+    this._location = loc;
   }
 
   ngOnInit() {
 
+    this.currentUser  = this.route.snapshot.params['user'];
+
+    // this.route.params.subscribe(params => {
+    //   this.currentUser = this.route.snapshot.parent.params['user'];
+    //
+    // });
   }
   goToWeatherSite(): void{
-    //window.location..='https://www.theweathernetwork.com/ca/weather/15a/ontario/markham';
-}
+    //location.href='https://www.theweathernetwork.com/ca/weather/15a/ontario/markham';
+
+  }
 }
