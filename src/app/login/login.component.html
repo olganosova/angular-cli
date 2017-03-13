@@ -4,7 +4,7 @@
   <div class="form-group" [ngClass]="{ 'has-error': (username.errors && f.submitted)  || (username.errors &&  (username.dirty || username.touched)) }">
     <label >Username</label>
     <input type="email" ngControl="email" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel"
-           pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" minlength="4" maxlength="24" required />
+           pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" minlength="4" maxlength="24" required validate-onblur />
     <div *ngIf="(username.errors && f.submitted)  || (username.errors &&  (username.dirty || username.touched))">
       <div *ngIf="(username.errors.required || username.errors.minlength)" class="help-block">Username is required not less than 4 characters</div>
       <div *ngIf="username.errors.pattern" class="help-block">Username is not in correct format</div>

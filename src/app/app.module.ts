@@ -14,6 +14,7 @@ import {AuthGuard} from "./common/auth-guard";
 import {AuthService} from "./common/auth.service";
 import {HttpService} from "./http/http.service";
 import {Broadcaster} from "./common/events-shared.service";
+import {ValidateOnBlurDirective} from './common/directives/validate-onblur.directive';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -27,6 +28,7 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     NgbdModalBasic,
     NgbdModalContent,
+    ValidateOnBlurDirective,
     ContactComponent,
     HelpComponent,
     LoginComponent,
