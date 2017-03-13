@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdModalBasic } from './modal/modal-basic';
 import { NgbdModalContent } from './modal/modal-component-content';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { rootRouterConfig } from './app.routes';
 import {Config} from './common/Config';
@@ -21,6 +23,10 @@ import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component';
 import { HelpComponent } from './help/help.component';
 import { LoginComponent } from './login/login.component';
+
+export function HttpLoaderFactory(http: Http) {
+  return new TranslateHttpLoader(http);
+}
 
 
 @NgModule({
@@ -42,9 +48,16 @@ import { LoginComponent } from './login/login.component';
     HttpModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true }),
     NgbModule.forRoot(), // Add Bootstrap module here.
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [Http]
+      }
+    })
   ],
   providers: [
-  Config,
+    Config,
     AuthGuard,
     AuthService,
     HttpService,

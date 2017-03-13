@@ -44,3 +44,7 @@ to test dist:
 npm install http-server -g
 http-server ./dist //outside of dist folder (int the folder tree or http-server inside dist folder
  in browser http://127.0.0.1:8080
+ 
+ ///////TRANSLATION/////////////////
+  npm install @ngx-translate/core --save
+  npm install @ngx-translate/http-loader --save

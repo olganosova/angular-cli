@@ -2,6 +2,7 @@ import { Component,  OnInit} from '@angular/core';
 //import { Router, NavigationEnd} from '@angular/router';
 import { Router, NavigationStart, NavigationEnd, NavigationError, NavigationCancel, RoutesRecognized } from '@angular/router';
 import {Config} from './common/Config';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ import {Config} from './common/Config';
 })
 export class AppComponent  implements OnInit {
   title = 'WOW, app works!';
+  param = {value: 'world'};
   //
   // constructor(private router: Router) {
   //   router.events.subscribe((val) => {
@@ -18,7 +20,11 @@ export class AppComponent  implements OnInit {
   //   });
   // }
   //
-  constructor(router:Router) {
+  constructor(router:Router,  translate: TranslateService) {
+    translate.setDefaultLang('fr');
+
+    // the lang to use, if the lang isn't available, it will use the current loader to get them
+    translate.use('fr');
     let st = router.routerState;
     router.events.forEach((event) => {
       if(event instanceof NavigationStart) {

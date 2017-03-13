@@ -18,6 +18,9 @@
     Login
   </a>
   <span [hidden] = "!username">{{username}}</span>
+  &nbsp;
+  <button class="btn" [ngClass]="{ 'btn-primary': currentLanguage === 'en' }" (click) = "changeLanguage('en')">English</button>
+  <button class="btn" [ngClass]="{ 'btn-primary': currentLanguage === 'fr' }" (click) = "changeLanguage('fr')">French</button>
 </nav>
 
 

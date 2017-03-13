@@ -3,6 +3,7 @@
  */
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {TranslateService} from '@ngx-translate/core';
 
 import {Config} from '../common/Config';
 import {Broadcaster} from "../common/events-shared.service";
@@ -19,16 +20,18 @@ export class HeaderComponent  implements OnInit {
   path: any;
   router: Router;
   username: string;
+  currentLanguage: string;
 
 loggedIn: boolean;
 
-  constructor(private _config: Config, data: Router, private broadcaster: Broadcaster) {
+  constructor(private translate: TranslateService, private _config: Config, data: Router, private broadcaster: Broadcaster) {
     this.router = data;
 
 
   }
 
   ngOnInit() {
+    this.currentLanguage =  this.translate.currentLang;
     this.imageFile =  this._config.getImage('logo');  // require("../assets/images/alfaTechLogoGr.png");
     //this.path = this._location;
 
@@ -37,6 +40,11 @@ loggedIn: boolean;
         this.username= value;
       }
     );
+  }
+
+  changeLanguage(lng :string) : void{
+    this.translate.use(lng);
+    this.currentLanguage = lng;
   }
 
 
