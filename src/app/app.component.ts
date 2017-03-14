@@ -21,10 +21,10 @@ export class AppComponent  implements OnInit {
   // }
   //
   constructor(router:Router,  translate: TranslateService) {
-    translate.setDefaultLang('fr');
+    translate.setDefaultLang('en');
 
     // the lang to use, if the lang isn't available, it will use the current loader to get them
-    translate.use('fr');
+    translate.use('en');
     let st = router.routerState;
     router.events.forEach((event) => {
       if(event instanceof NavigationStart) {
