@@ -9,6 +9,7 @@ import { NgbdModalBasic } from './modal/modal-basic';
 import { NgbdModalContent } from './modal/modal-component-content';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {AgGridModule} from "ag-grid-angular/main";
 
 import { rootRouterConfig } from './app.routes';
 import {Config} from './common/Config';
@@ -23,6 +24,9 @@ import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component';
 import { HelpComponent } from './help/help.component';
 import { LoginComponent } from './login/login.component';
+import { MyGridApplicationComponent } from './my-grid-application/my-grid-application.component';
+import { RedComponentComponent } from './red-component/red-component.component';
+
 
 export function HttpLoaderFactory(http: Http) {
   return new TranslateHttpLoader(http);
@@ -38,7 +42,9 @@ export function HttpLoaderFactory(http: Http) {
     ContactComponent,
     HelpComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    MyGridApplicationComponent,
+    RedComponentComponent
   ],
   entryComponents: [NgbdModalContent], ///////to pass component to Modal!!!!!!!!!!!!!!!!!
   imports: [
@@ -54,7 +60,10 @@ export function HttpLoaderFactory(http: Http) {
         useFactory: HttpLoaderFactory,
         deps: [Http]
       }
-    })
+    }),
+    AgGridModule.withComponents(
+      [RedComponentComponent]
+    )
   ],
   providers: [
     Config,

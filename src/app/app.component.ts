@@ -29,10 +29,7 @@ export class AppComponent  implements OnInit {
     router.events.forEach((event) => {
       if(event instanceof NavigationStart) {
       }
-      // NavigationEnd
-      // NavigationCancel
-      // NavigationError
-      // RoutesRecognized
+    
     });
   }
 

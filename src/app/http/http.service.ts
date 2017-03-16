@@ -14,7 +14,8 @@ export class URL {
 const URLS: URL[] = [
   {name: 'getRepos', endPoints: {live: 'repos', mock: 'repos.json'}},
   {name: 'makePost', endPoints: {live: 'makepost', mock: 'makepost.json'}},
-  {name: 'login', endPoints: {live: 'login', mock: 'login.json'}}
+  {name: 'login', endPoints: {live: 'login', mock: 'login.json'}},
+  {name: 'getGridData', endPoints: {live: 'getGrid', mock: 'grid-data.json'}}
 ];
 const PREFIXES: {} =
 {
