@@ -15,11 +15,11 @@ const URLS: URL[] = [
   {name: 'getRepos', endPoints: {live: 'repos', mock: 'repos.json'}},
   {name: 'makePost', endPoints: {live: 'makepost', mock: 'makepost.json'}},
   {name: 'login', endPoints: {live: 'login', mock: 'login.json'}},
-  {name: 'getGridData', endPoints: {live: 'getGrid', mock: 'grid-data.json'}}
+  {name: 'getGridData', endPoints: {live: 'grid', mock: 'grid-data.json'}}
 ];
 const PREFIXES: {} =
 {
-  livePrefix: 'https://api.github.com/orgs/angular/',
+  livePrefix: 'http://127.0.0.1:8081/',
   mockPrefix: '../../assets/mocks/'
 
 };

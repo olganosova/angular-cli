@@ -7,7 +7,7 @@ export class Config {
 
   SETTINGS: {} =
   {
-    fakeMode: true,
+    fakeMode: false,
     livePrefix: 'https://api.github.com/orgs/angular/',
     mockPrefix: '../../assets/mocks/'
 
