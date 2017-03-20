@@ -1,0 +1,201 @@
+[
+  {
+    "section": "Carry",
+    "subsections": [
+      {
+        "title": "",
+        "lines": [
+          {
+            "title": "Re-Anchoring",
+            "cad": 13828,
+            "chf": -226,
+            "eur": -4240,
+            "gbp": 5920,
+            "usd": 8526,
+            "total": 23808
+          },
+          {
+            "title": "Interest Accrual",
+            "cad": 9,
+            "chf": 0,
+            "eur": 0,
+            "gbp": 0,
+            "usd": -6125,
+            "total": -6115
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Position P&L",
+    "subsections": [
+      {
+        "title": "Interest Rates Delta",
+        "lines": [
+          {
+            "title": "Major Curve",
+            "cad": 118867,
+            "chf": 0,
+            "eur": -51771,
+            "gbp": 5920,
+            "usd": 82953,
+            "total": 34284
+          },
+          {
+            "title": "Swap Spread",
+            "cad": 79066,
+            "chf": 0,
+            "eur": 17511,
+            "gbp": 13957,
+            "usd": -6125,
+            "total": 51012
+          }
+        ]
+      },
+      {
+        "title": "Interest Rates Gamma",
+        "lines": [
+          {
+            "title": "Major Curve",
+            "cad": 118867,
+            "chf": 0,
+            "eur": -51771,
+            "gbp": 5920,
+            "usd": 82953,
+            "total": 34284
+          },
+          {
+            "title": "Swap Spread",
+            "cad": 79066,
+            "chf": 0,
+            "eur": 17511,
+            "gbp": 13957,
+            "usd": -6125,
+            "total": 51012
+          }
+        ]
+      },
+      {
+        "title": "Credit Delta",
+        "lines": [
+          {
+            "title": "Credit Spread",
+            "cad": 0,
+            "chf": 0,
+            "eur": 0,
+            "gbp": 0,
+            "usd": 0,
+            "total": 0
+          },
+          {
+            "title": "Swap Curve to IR Volatility",
+            "cad": 0,
+            "chf": 0,
+            "eur": 0,
+            "gbp": 0,
+            "usd": 0,
+            "total": 0
+          }
+        ]
+      },
+      {
+        "title": "Resets",
+        "lines": [
+          {
+            "title": "Interest Rates Resets",
+            "cad": 96,
+            "chf": 0,
+            "eur": 0,
+            "gbp": -82,
+            "usd": 0,
+            "total": 0
+          },
+          {
+            "title": "FX Rate Resets",
+            "cad": 0,
+            "chf": 0,
+            "eur": 0,
+            "gbp": 0,
+            "usd": 0,
+            "total": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "New Trading P&L",
+    "subsections": [
+      {
+        "title": "",
+        "lines": [
+          {
+            "title": "New Deals",
+            "cad": -5475,
+            "chf": -29,
+            "eur": 0,
+            "gbp": -560,
+            "usd": 0,
+            "total": -6064
+          },
+          {
+            "title": "Unwinds",
+            "cad": 3974,
+            "chf": 0,
+            "eur": 0,
+            "gbp": 0,
+            "usd": 0,
+            "total": 3974
+          },
+          {
+            "title": "Rebookings",
+            "cad": 0,
+            "chf": 0,
+            "eur": 0,
+            "gbp": 0,
+            "usd": 0,
+            "total": 0
+          },
+          {
+            "title": "Fees",
+            "cad": 0,
+            "chf": 0,
+            "eur": 0,
+            "gbp": 0,
+            "usd": 0,
+            "total": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+      "section": "Other",
+      "subsections": [
+        {
+          "title": "",
+          "lines": [
+            {
+              "title": "Reserves",
+              "cad": 0,
+              "chf": 0,
+              "eur": 0,
+              "gbp": 0,
+              "usd": 0,
+              "total": 0
+            },
+            {
+              "title": "Other Adjustments",
+              "cad": 0,
+              "chf": 0,
+              "eur": 0,
+              "gbp": 0,
+              "usd": 0,
+              "total": 0
+            }
+          ]
+        }
+      ]
+    }
+]
